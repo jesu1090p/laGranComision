@@ -14,7 +14,55 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/carousel.css">
+    <link rel="stylesheet" href="/styles/featurettes.css">
     <link rel="stylesheet" href="/styles/fonts.css">
+     <style>
+        /* Estilo para asegurar que las tarjetas tengan la misma altura que la imagen */
+        .card {
+            height: 100%;
+        }
+        /* Estilo para asegurar que las tarjetas estén alineadas verticalmente con la imagen */
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+       
+        .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+      .map-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Proporción 16:9 */
+        }
+        .map-container iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -28,8 +76,8 @@
             </div>
             <div class="menu-items">
                 <ul class="poppins-medium">
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Quienes somos</a></li>
-                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Servicios</a></li>
+                    <li><a href="#quienes-somos" rel="noopener noreferrer">Quienes somos</a></li>
+                    <li><a href="#mateo" target="_blank" rel="noopener noreferrer">Servicios</a></li>
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">Ministerios</a></li>
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">Eventos</a></li>
                     <li><a href="http://" target="_blank" rel="noopener noreferrer">Contacto</a></li>
@@ -76,32 +124,156 @@
             </button>
             </div>
     </main>
-    <section class="container quienes-somos mt-5 montserrat-thin">
-        <div class="row text-center">
-            <h1 class="">
-                ¿Quienes somos?
-            </h1>
+<section class="container quienes-somos" id="quienes-somos">  
+    <hr class="featurette-divider">
+    <div class="row d-flex justify-content-center"> <!-- Agrega las clases d-flex justify-content-center para centrar las columnas -->
+        <!-- Párrafo descriptivo -->
+        <div class="col-md-12 mt-2">
+            <h2 class="text-center mb-4 fs-1 montserrat-regular">¿Quiénes Somos?</h2>
+            <p class="text-center lead">Somos una comunidad comprometida en seguir a Jesús, amar a Dios y amar a las personas. Nos esforzamos por ser una familia de fe que impacta positivamente en nuestra comunidad y más allá.</p>
         </div>
-        <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card w-50">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card w-50">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+    </div>
+    <div class="row mt-5">
+        <!-- Tarjeta de Misión -->
+        <div class="col-md-6"> <!-- Cambia col-md-4 por col-md-6 -->
+            <div class="card" style="background-color: #BD4FF1; height: 100%; width: 100%;"><!-- Agrega height: 100%; width: 100%; para hacerla cuadrada -->
+                <div class="card-body text-light">
+                    <h5 class="card-title fs-2 mt-5 text-center montserrat-regular">Nuestra Misión</h5>
+                    <p class="lead card-text p-5">Nuestra misión es proclamar el evangelio de Jesucristo, hacer discípulos y transformar vidas mediante el amor y la gracia de Dios.</p>
                 </div>
             </div>
+        </div>
+       
+        <!-- Tarjeta de Visión -->
+        <div class="col-md-6"> <!-- Cambia col-md-4 por col-md-6 -->
+            <div class="card" style="background-color: #17D8C7; height: 100%; width: 100%;"><!-- Agrega height: 100%; width: 100%; para hacerla cuadrada -->
+                <div class="card-body text-light">
+                    <h5 class="card-title fs-2 mt-5 text-center montserrat-regular">Nuestra Visión</h5>
+                    <p class="lead card-text p-5">Buscamos ser una iglesia vibrante y relevante, comprometida con el crecimiento espiritual, la comunión genuina y el servicio activo en la comunidad.</p>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+
+    <!-- START THE FEATURETTES -->
+    <section class="container-fluid featurettes" style="background-image: linear-gradient(to right, #ff5757 , #8c52ff)">
+        <div class="container">
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1 text-light">La <span class="" style="color: #fff134;">Iglesia Cristiana La Gran Comisi&oacute;n Jes&uacute;s Vive</span> te da la bienvenida</h2>
+            <p class="lead text-light">Como iglesia, nuestra visión misionera es clara: alcanzar a cada persona con el amor y el mensaje transformador de Jesucristo. Nos comprometemos a ser luz en las comunidades, llevando esperanza, restauración y amor a todos los rincones de nuestra sociedad.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="/public/images/misc/alabando a dios.jpg" alt="" srcset="" width="500px">
+        </div>
+        </div>
+
+        </div>
+        <hr class="featurette-divider">
+    </section>
+    <section class="container featurettes">
+        <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Mensaje de nuestros <span class="text-body-secondary">pastores</span></h2>
+            <p class="lead">Es un profundo honor para nosotros, el Apóstol Yesid Ibáñez y la Pastora Carmen Aldana, liderar esta amada comunidad. Nos comprometemos fervientemente a caminar junto a ustedes en esta travesía espiritual, nutriendo sus almas con la Palabra de Dios, brindando orientación y apoyo en cada paso del camino. </p><p class="lead"> Nuestro anhelo es que cada uno de ustedes florezca y alcance su pleno potencial en Cristo, transformando nuestras vidas y nuestra comunidad con el amor y la gracia de Dios. Que juntos, como una familia de fe, sigamos avanzando en la visión que Dios tiene para nosotros, llevando esperanza y luz a un mundo necesitado.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img src="/public/images/misc/Nuestros pastores.png" alt="" srcset="" width="500px">
+        </div>
+        </div>
+    </section>
+
+    <section class="container-fluid featurettes" style="background-image: linear-gradient(to right, #8c52ff , #5ce1e6)">
+        <hr class="featurette-divider">
+        <div class="container featurette">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading fw-normal lh-1">Revisa nuestros <span class="text-light">horarios</span></h2>
+                    <p class="lead text-light">Todas la semanas puedes adorar, aprender y compartir. Encontrarás diversas oportunidades para conectarte y crecer en tu fe. ¡Esperamos verte pronto en nuestras reuniones!</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="/public/images/misc/Programacion Semanal.jpg" alt="" srcset="" width="500px">
+                </div>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+    </section>
+
+    <section class="container featurettes">
+        <div class="row featurette">
+        <div class="col-md-5 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Estamos en el Barrio<span class="text-body-secondary"> El Condord, en Malambo, Atlántico</span></h2>
+            <p class="lead">Vis&iacute;tanos y disfruta de una experiencia cercana con Dios</p>
+            <p class="lead">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg> Encu&eacute;ntranos en la <span class="fw-bold"> Calle 17 No. 25 - 64 </span><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                </svg> Llámanos al <a href="tel:+573053222542">305 322 2542</a><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                    <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                    <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                </svg> Escríbenos a <a href="mailto:info@lagrancomisionjesusvive.com">info@lagrancomisionjesusvive.com</a>
+            </p>
+        </div>
+        <div class="col-md-7 order-md-1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d530.8220888540927!2d-74.77675651360711!3d10.869921988082494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.       1!3m3!1m2!1s0x8ef5cdfef64f9b8d%3A0xc4c020f49de5779c!2sIglesia%20Cristiana%20La%20Gran%20Comisi%C3%B3n%20Jesus.V!5e1!3m2!1ses-419!2sco!4v1713992205221!5m2!1ses-419!2sco"    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
+        <hr class="featurette-divider">
+    </section>
+    <!-- /END THE FEATURETTES -->
+
+    <section class="footer">
+        <!-- Pie de página -->
+        <footer class="footer bg-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Encu&eacute;ntranos</h5>
+                        <p>Iglesia Cristiana La Gran Comisión Jesús Vive<br>
+                        Calle 17 No. 25 - 64, Barrio El Concord<br>
+                        Malambo, Atlántico</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Teléfono</h5>
+                        <p>Llámanos al: <a href="tel:+573053222542">305 322 2542</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="mb-3">Síguenos en nuestras redes sociales</h5>
+                        <!-- Agrega aquí los enlaces a las redes sociales si tienes -->
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100069253075922" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 18 18">
+                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                    </svg>Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@nuevorenacerencristo8962" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 18 18">
+                                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                                    </svg>YouTube
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                    </svg>Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

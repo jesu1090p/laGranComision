@@ -1,0 +1,54 @@
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #566;
+    opacity: 80%;
+}
+.menu-items {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+     
+}
+
+nav ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    color: aliceblue;
+    transition: color 0.8s ease, background-image 0.8s ease, border-radius 0.8s ease; 
+    border-radius: 30px;   
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    background-image: linear-gradient(to right, #ffd700, #ff7f00);
+    color: #333;
+    border-radius: 30px;
+}
+
+.menu-items > ul {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 10px 15px; 
+    margin-top: 1rem;
+}
+
+.donar {
+    color: white;
+    background-image: linear-gradient(to right, #ffd700, #ff7f00);
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.5s ease;
+    border: 1px solid #E8C258;
+}
+
+.donar:hover {
+    background-image: linear-gradient(to right, #ff7f00 , yellow);
+    border-radius: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
